@@ -1,0 +1,64 @@
+/* BASIC STYLES HERE */
+
+body {
+    font-family: "Exo 2", sans-serif;
+    display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+  }
+.bgimage{
+    width:100vw;
+    background-size:cover;
+}
+.container1 {
+    position: relative;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px #000;
+  }
+  .top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+
+  .linktext{
+      color: white;
+  }
+
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
+
+  
+  #clock {
+    color: #ccecf1;
+    font-size: 56px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-shadow: 2px 2px 2px #000;
+  }
+
+
+.author{
+  visibility:hidden;
+}
+.author:hover{
+  visibility:visible;
+}
