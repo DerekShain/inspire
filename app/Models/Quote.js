@@ -12,7 +12,6 @@ export class Quote {
 
   get Template() {
     return /*html*/ `
-    <div>
         <h5 title="Quote from ${this.author}">${this.content}</h5>
     
         `;

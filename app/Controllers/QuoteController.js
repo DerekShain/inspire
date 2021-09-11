@@ -8,7 +8,6 @@ export class QuoteController{
     constructor(){
         ProxyState.on("quotes", _drawQuote)
         this.getQuote()
-        console.log('test', quoteService)
     }
     getQuote() {
         quoteService.getQuote()

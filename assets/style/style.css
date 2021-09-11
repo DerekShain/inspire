@@ -62,3 +62,11 @@ body {
 .author:hover{
   visibility:visible;
 }
+.specialcard{
+  background: #181b1475
+}
+.specialtext{
+  color: white
+}
+
+/* NOTE this is for the temperature change */
