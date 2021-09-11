@@ -4,6 +4,10 @@
         "linktext",
         "preconnect",
         "referrerpolicy",
+        "specialcard",
+        "specialtext",
+        "Swal",
+        "Todos",
         "tooltiptext"
     ]
 }

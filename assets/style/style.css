@@ -69,4 +69,7 @@ body {
   color: white
 }
 
-/* NOTE this is for the temperature change */
+.trashPosition {
+  right: 20px;
+  padding: 2px;
+}
