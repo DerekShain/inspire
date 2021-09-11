@@ -1,20 +1,7 @@
 inspire
 ============
 
-### Get Started
+### Relax!
 
-```terminal
-> npm i
-> npm run sass
-> npm run serve
-```
+Enjoy the scenery with this all in one weather, task, and quote viewer with digital time!
 
-### AuthConfig
-
-Fill in your AuthConfig with keys from [Auth0](https://auth0.com/)
-
-```javascript
-export const domain = '' 
-export const clientId = '' 
-export const audience = '' 
-```

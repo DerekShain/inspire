@@ -8,7 +8,7 @@ export class Weather {
     this.fahrenheit = Math.floor(((wxData.main.temp - 273.5) * 9) / 5 + 32);
     this.celsius = Math.floor(wxData.main.temp - 273.15);
     this.temp = "fahrenheit";
-    this.pressure = Math.floor(wxData.main.pressure /  33.864);
+    this.pressure = Math.floor(wxData.main.pressure / 33.864);
     this.wind = wxData.wind.speed;
     this.windD = wxData.wind.deg
     this.clouds = wxData.clouds;

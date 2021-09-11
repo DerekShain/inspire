@@ -12,14 +12,12 @@ export class Todos {
         
         <form >
       <input type="checkbox" id="${this.id}" name="checkbox" 
-     ${
-       this.completed ? "checked" : ""
-     } onclick="app.todosController.toggleDone('${this.id}')" >
+     ${this.completed ? "checked" : ""
+      } onclick="app.todosController.toggleDone('${this.id}')" >
       <label for="checkbox"> 
    
       ${this.description} 
-      <i class="fas fa-trash-alt trashPosition" onclick="app.todosController.deleteTodo('${
-        this.id
+      <i class="fas fa-trash-alt trashPosition" onclick="app.todosController.deleteTodo('${this.id
       }')"></i>
   
       </label>
