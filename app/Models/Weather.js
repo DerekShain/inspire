@@ -8,25 +8,29 @@ export class Weather {
     this.fahrenheit = Math.floor(((wxData.main.temp - 273.5) * 9) / 5 + 32);
     this.celsius = Math.floor(wxData.main.temp - 273.15);
     this.temp = "fahrenheit";
-    this.wind = wxData.wind;
+    this.pressure = Math.floor(wxData.main.pressure /  33.864);
+    this.wind = wxData.wind.speed;
+    this.windD = wxData.wind.deg
     this.clouds = wxData.clouds;
     this.id = wxData.id;
     this.name = wxData.name;
+    this.humidity = wxData.main.humidity
   }
 
   get Template() {
     return /*html */ `
-    <div onclick="app.weatherController.tempChange()">
-    <h5>${
-      this.name
-    }<img src="http://openweathermap.org/img/wn/${this.wxIcon()}@2x.png">
+    <div onclick="app.weatherController.tempChange()" class="p3">
+      <h2> ${this.name}<img src="http://openweathermap.org/img/wn/${this.wxIcon()}@2x.png">
         <span id="tChange">${this.fahrenheit} F
         </span>
-        </h5>
-        </div>
-        
-        <small>Sky Conditions: ${this.formatWeather()}</small>
-        <small>Coordinates: ${this.long}, ${this.lat}</small>
+      </h2>
+    </div><br/>
+        <h6>Sky Conditions: ${this.formatWeather()}</h6>
+        <h6>Coordinates:  ${this.lat} Latitude, ${this.long} Longitude</h6>
+        <h6>Wind Speed: ${this.wind}</h6>
+        <h6>Wind Direction: ${this.windD}</h6>
+        <h6>Pressure: ${this.pressure} inHg </h6>
+        <h6>Humidity: ${this.humidity} %</h6>
         `;
   }
 
