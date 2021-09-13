@@ -1,14 +1,13 @@
 export class Todos {
-  constructor(todoData) {
-    this.id = todoData._id;
-    this.completed = todoData.completed;
-    this.user = todoData.user;
-    this.description = todoData.description;
-    this.id = todoData.id;
-  }
+    constructor(todoData) {
+        this.id = todoData.id;
+        this.completed = todoData.completed;
+        this.user = todoData.user;
+        this.description = todoData.description;
+    }
 
-  get Template() {
-    return /*html*/ `
+    get Template() {
+        return /*html*/ `
         
         <form >
       <input type="checkbox" id="${this.id}" name="checkbox" 
@@ -23,5 +22,5 @@ export class Todos {
       </label>
     </form>
         `;
-  }
+    }
 }

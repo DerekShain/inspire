@@ -43,6 +43,12 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.bottom-center {
+    position: absoloute;
+    bottom: 8px;
+    left: 50%;
+}
+
 .bottom-right {
     position: absolute;
     bottom: 8px;
@@ -53,8 +59,6 @@ body {
     color: #ccecf1;
     font-size: 56px;
     text-align: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
     text-shadow: 2px 2px 2px #000;
 }
 
