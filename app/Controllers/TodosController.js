@@ -6,7 +6,7 @@ function _drawTodos() {
     ProxyState.todos.forEach((t) => (template += t.Template));
     document.getElementById("todo").innerHTML = template;
     let others = ProxyState.todos.filter((t) => t.completed);
-    document.getElementById("counter").innerHTML = `${others.length} out of ${ProxyState.todos.length}`;
+    document.getElementById("counter").innerHTML = `You have ${others.length} out of ${ProxyState.todos.length} completed.`;
     console.log(ProxyState.todos);
 }
 export class TodosController {
@@ -25,24 +25,32 @@ export class TodosController {
         const taskData = { description: form.description.value, };
         await todosService.addTodo(taskData);
         form.reset();
+        // @ts-ignore
+        Swal.fire({
+            position: 'bottom-end',
+            icon: 'success',
+            title: 'New item added to list',
+            showConfirmButton: false,
+            timer: 1500
+        })
     }
     async deleteTodo(id) {
         // @ts-ignore
         Swal.fire({
             title: "Are you sure?",
-            text: "This will be deleted forever!!",
+            text: "This will be erased forever!!",
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!",
+            confirmButtonText: "Yes, erase it!",
         }).then(async(result) => {
             if (result.isConfirmed) {
                 console.log(id);
                 // @ts-ignore
                 await todosService.deleteTodo(id);
                 // @ts-ignore
-                Swal.fire("Deleted!", "Task has been deleted!", "success");
+                Swal.fire("Erased!", "Task has been erased!", "success");
             }
         });
     }

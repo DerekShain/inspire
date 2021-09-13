@@ -9,15 +9,15 @@ export class Todos {
     get Template() {
         return /*html*/ `
         
-        <form >
+        <form style = "display: flex; align-items: center; justify-content: space-between;">
       <input type="checkbox" id="${this.id}" name="checkbox" 
      ${this.completed ? "checked" : ""
-      } onclick="app.todosController.toggleDone('${this.id}')" >
+            } onclick="app.todosController.toggleDone('${this.id}')" title="Check if completed.">
       <label for="checkbox"> 
    
       ${this.description} 
-      <i class="fas fa-trash-alt trashPosition" onclick="app.todosController.deleteTodo('${this.id
-      }')"></i>
+      <i class="fas fa-eraser" title="Erase Task" onclick="app.todosController.deleteTodo('${this.id
+            }')" ></i>
   
       </label>
     </form>
